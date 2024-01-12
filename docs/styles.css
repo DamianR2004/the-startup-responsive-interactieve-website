@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: 'DM Sans';
-    src: URL('/assets/DMSans-Regular.ttf') format('truetype');
+    src: URL("../assets/DMSans-Regular.ttf")
+    format("truetype");
   }
 
 
