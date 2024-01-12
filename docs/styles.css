@@ -1,17 +1,12 @@
 
-@font-face {
-    font-family: "DM Sans";
-    font-weight: 400;
-    src: url("../assets/fonts/DMSans-Regular.ttf")
-      format("truetype");
-  }
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
 
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'DM Sans' , 'sans-serif';
+    font-family: 'DM Sans', 'sans-serif';
 }
 
 h1{
