@@ -7,6 +7,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
+    line-height: 1.5em;
+    font-weight: 400;
 
     
 }
@@ -17,8 +19,8 @@
     --Primary5: #F2A900;
     --Primary10: #000000;
     --FontSmall: 13px;
-    --FontMedium: 0.833vw;
-    --FontLarge: 1.833vw;
+    --FontMedium: 16;
+    --FontLarge: 20px;
     --FontXLarge: 24px;
 }
 
@@ -74,8 +76,8 @@ header{
 main img{
 top:0;
 left:0;
-width:100%;
-height:100%;
+width: 100%;
+max-width:100%;
 background-repeat:no-repeat;
 background-size:100% auto;
 }
@@ -92,10 +94,67 @@ h1 {
       font-family: 'DM Sans';
   }
 
+ 
+
+
+
 
  h2{
- font-size: var(--FontLarge);
+ font-size: var(--FontXLarge);
+ font-weight: bold;
+ padding: 15px;
+ animation: fadeIn 4s;
+
+ color: var(--Primary10);
  } 
+
+ @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+ p{
+    font-size: var(--FontMedium);
+    padding: 15px;
+    color: var(--Primary10);
+ }
+
+ h3{
+    font-weight: bold;
+    padding: 15px;
+    font-size: var(--FontLarge);
+    color: var(--Primary10);
+    animation: fadeIn 8s;
+ }
+
+
+ main li{
+    padding: 0px 35px;
+    margin: 10px;
+    list-style-position: inside;
+    font-size: var(--FontSmall);
+    color: var(--Primary10);
+    list-style-image: url(/assets/check-icon.svg);
+
+   
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
