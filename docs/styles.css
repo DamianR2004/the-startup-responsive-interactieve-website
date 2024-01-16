@@ -15,11 +15,12 @@
 
 :root{
     --Primary0: #ffffff;
-    --Primary2: ##FDF2D9;
+    --Primary2: #FDF2D9;
     --Primary5: #F2A900;
     --Primary10: #000000;
     --FontSmall: 13px;
-    --FontMedium: 16;
+    --FontMedium: 16px;
+    --FontNav: 16px;
     --FontLarge: 20px;
     --FontXLarge: 24px;
 }
@@ -28,8 +29,9 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 84px;
     background-color: var(--Primary0);
+
     
 }
 
@@ -42,7 +44,7 @@ header{
     align-items: center;
     list-style-type: none;
     gap: .5em;
-    font-size: var(--FontMedium);
+    font-size: var(--FontNav);
 
     & a{
         text-decoration: none;
@@ -57,7 +59,6 @@ header{
     & svg:nth-last-of-type(2){
         display: none;
     }
-
 }
 
 
@@ -93,11 +94,17 @@ h1 {
       font-weight: bold;
       font-family: 'DM Sans';
   }
-
  
-
-
-
+  
+  .container {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      "main main . sidebar"
+      "footer footer footer footer";
+  }
 
  h2{
  font-size: var(--FontXLarge);
@@ -125,33 +132,94 @@ h1 {
     padding: 15px;
     font-size: var(--FontLarge);
     color: var(--Primary10);
-    animation: fadeIn 8s;
+    animation: fadeIn 7.5s;
  }
 
 
  main li{
-    padding: 0px 35px;
-    margin: 10px;
+    padding: 10px 25px;
     list-style-position: inside;
-    font-size: var(--FontSmall);
+    font-size: var(--FontMedium);
     color: var(--Primary10);
     list-style-image: url(/assets/check-icon.svg);
+ }
 
-   
+ li::marker{
+    font-size: 1.4em;
  }
 
 
+ form{
+    background-color: var(--Primary2);
+
+    & label{
+        padding: 10px;
+    }
+ }
+ 
+ 
 
 
 
 
+  input[type=text]{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--PrimaryColor2);
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+  input[type=email]{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--PrimaryColor2);
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+  input[type=tel]{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--PrimaryColor2);
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
 
 
 
+  .information-download{
+    background-color: var(--Primary10);
+    width: 100%;
+    margin: 0 auto;
+  }
 
+  .information-download-container {
+    position: fixed;
+    background-color: var(--PrimaryColor2);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    translate: 0% 100%;
+    transition: 0.5s;
+    padding: 5em 1em 1em;
+    z-index: 9999;
+  }
+  
+  .information-download-container.open {
+    translate: 0% 20%;
 
+  }
+  
+  .information-download-container.close {
+    translate: 0 -100%;
 
-
+  }
+  
 
 
 
@@ -171,11 +239,13 @@ h1 {
 
 
 
+
 @media only screen and (min-width: 775px) {
     .menu {
       display: none;
     }
 
+    
     
     
   }
@@ -185,4 +255,20 @@ h1 {
     .header-right li:nth-of-type(n + 1):nth-of-type(-n + 7) {
       display: none;
     }
+
+    .information-download img{
+        display: none;
+    }
+    
 }
+
+@media only screen and (min-width: 1020px) {
+    :root {
+    --FontMedium: 20px;
+    --FontLarge: 24px;
+    --FontXLarge: 30px;
+}
+
+}
+
+
