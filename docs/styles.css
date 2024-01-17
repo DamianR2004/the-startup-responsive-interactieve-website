@@ -155,6 +155,8 @@ h1 {
     & label{
         padding: 10px;
     }
+
+    
  }
  
  
@@ -193,8 +195,6 @@ h1 {
 
   .information-download{
     background-color: var(--Primary10);
-    width: 100%;
-    margin: 0 auto;
   }
 
   .information-download-container {
@@ -205,13 +205,13 @@ h1 {
     left: 0;
     right: 0;
     translate: 0% 100%;
-    transition: 0.5s;
-    padding: 5em 1em 1em;
+    transition: 0.7s;
+    /* padding: 5em 1em 1em; */
     z-index: 9999;
   }
   
   .information-download-container.open {
-    translate: 0% 20%;
+    translate: 0% 15%;
 
   }
   
@@ -225,41 +225,35 @@ h1 {
 
 
 
-  
-@media only screen and (min-width: 775px) {
-    .header-left svg{
-        width: 3em;
-        height: 3em;
-}
 
 .header-right li{
     font-size: var(--FontSmall);
 }
-}
 
 
 
 
-@media only screen and (min-width: 775px) {
+@media only screen and (min-width: 776px) {
     .menu {
       display: none;
     }
 
-    
-    
-    
-  }
-  
+}
 
-  @media only screen and (max-width: 780px) {
+
+  @media only screen and (max-width: 776px) {
     .header-right li:nth-of-type(n + 1):nth-of-type(-n + 7) {
       display: none;
     }
-
-    .information-download img{
-        display: none;
-    }
+  
     
+}
+
+@media (min-width: 776px) and (max-width: 853px) {
+    .header-left svg {
+        width: 3em;
+        height: 3em;
+    }
 }
 
 @media only screen and (min-width: 1020px) {
