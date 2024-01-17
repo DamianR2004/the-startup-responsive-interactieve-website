@@ -148,78 +148,74 @@ h1 {
     font-size: 1.4em;
  }
 
-
- form{
-    background-color: var(--Primary2);
-
-    & label{
-        padding: 10px;
-    }
-
-    
+ 
+ .information-download-container{
+  background-color: #F2A900;
+  padding: 20px;
  }
- 
- 
+
+ .information-download-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  translate: 0% 100%;
+  transition: 0.7s;
+  padding: 5em em 1em;
+  inset: 0;
+}
+
+.information-download-container.open {
+  translate: 0% 40%;
+  /* backdrop-filter: blur(10px); */
+
+}
+
+.information-download-container.close {
+  translate: 0 200%;
+
+}
+
+body:has(.information-download-container.open:not(.close)) main{
+  .information-text{
+      display: none;
+  }
+}
 
 
+body:has(.information-download-container.open) button{
+display:none;
 
+}
 
   input[type=text]{
     width: 100%;
-    padding: 5px;
-    border: 1px solid var(--PrimaryColor2);
+    padding: 10px;
+    background-color: var(--Primary2);
     border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 16px;
+    margin: 10px 0;
   }
 
   input[type=email]{
     width: 100%;
-    padding: 5px;
-    border: 1px solid var(--PrimaryColor2);
+    padding: 10px;
+    border: 1px solid var(--Primary2);
     border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 16px;
+    margin: 10px 0;
   }
 
   input[type=tel]{
     width: 100%;
-    padding: 5px;
-    border: 1px solid var(--PrimaryColor2);
+    padding: 10px;
+    border: 1px solid var(--Primary2);
     border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 16px;
+    margin: 10px 0px;
   }
 
-
-
-  .information-download{
-    background-color: var(--Primary10);
-  }
-
-  .information-download-container {
-    position: fixed;
-    background-color: var(--PrimaryColor2);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    translate: 0% 100%;
-    transition: 0.7s;
-    /* padding: 5em 1em 1em; */
-    z-index: 9999;
-  }
-  
-  .information-download-container.open {
-    translate: 0% 15%;
-
-  }
-  
-  .information-download-container.close {
-    translate: 0 -100%;
-
-  }
-  
+input:focus{
+  background-color: var(--Primary2);
+  border: solid 1px var(--Primary2);
+}
 
 
 
@@ -238,6 +234,7 @@ h1 {
       display: none;
     }
 
+ 
 }
 
 
@@ -245,7 +242,14 @@ h1 {
     .header-right li:nth-of-type(n + 1):nth-of-type(-n + 7) {
       display: none;
     }
+
+    .information-download-container img{
+        display: none;
+    }
   
+    input[type=text], input[type=email] , input[type=tel], label{
+      padding: 2px;
+      font-size: var(--FontSmall);
     
 }
 
@@ -266,3 +270,4 @@ h1 {
 }
 
 
+  }

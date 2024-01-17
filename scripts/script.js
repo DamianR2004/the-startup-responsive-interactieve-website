@@ -14,4 +14,4 @@
             downloadCloseInformation.classList.toggle("close");
         });
     
-    
+      
