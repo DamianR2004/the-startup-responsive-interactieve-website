@@ -95,16 +95,6 @@ h1 {
       font-family: 'DM Sans';
   }
  
-  
-  .container {
-    display: grid;
-    grid-template-columns: 50px 50px 50px 50px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "header header header header"
-      "main main . sidebar"
-      "footer footer footer footer";
-  }
 
  h2{
  font-size: var(--FontXLarge);
@@ -148,86 +138,134 @@ h1 {
     font-size: 1.4em;
  }
 
- 
- .information-download-container{
-  background-color: #F2A900;
-  padding: 20px;
- }
-
- .information-download-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  translate: 0% 100%;
-  transition: 0.7s;
-  padding: 5em em 1em;
-  inset: 0;
-}
-
-.information-download-container.open {
-  translate: 0% 40%;
-  /* backdrop-filter: blur(10px); */
-
-}
-
-.information-download-container.close {
-  translate: 0 200%;
-
-}
-
-body:has(.information-download-container.open:not(.close)) main{
+ body:has(.information-download-container.open:not(.close)) main{
   .information-text{
       display: none;
   }
+
+} 
+ 
+
+.information-download-container{ 
+  display: block;
+  background-color: var(--Primary2);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin-top: .5em;
+
+
 }
 
-
-body:has(.information-download-container.open) button{
-display:none;
-
+#myform{
+  height:500px;
 }
+
 
   input[type=text]{
     width: 100%;
     padding: 10px;
     background-color: var(--Primary2);
-    border-radius: 4px;
     margin: 10px 0;
+    border: solid 1px var(--Primary10);
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
   }
 
   input[type=email]{
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--Primary2);
-    border-radius: 4px;
+    background-color: var(--Primary2);
     margin: 10px 0;
+    border: solid 1px var(--Primary10);
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
   }
 
   input[type=tel]{
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--Primary2);
-    border-radius: 4px;
-    margin: 10px 0px;
+    background-color: var(--Primary2);
+    margin: 10px 0;
+    border: solid 1px var(--Primary10);
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;  
   }
 
-input:focus{
-  background-color: var(--Primary2);
-  border: solid 1px var(--Primary2);
+  .closebutton{
+    width: 100%;
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 40px;
+  }
+
+ .closebutton button{
+  background: var(--Primary2);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width:70px;
+  height: 70px;
+  text-align: center;
+  font-size: xx-large;
 }
 
 
+.information-download-container button:nth-of-type(2){
+  border: none;
+  background-color: var(--Primary5);
+  color: var(--Primary0);
+  padding: 10px;
+  margin-top: 10em;
+}
+
+input[type=checkbox] {
+  padding: 10px;
+  margin: 10px 0;
+  accent-color: var(--Primary5);
+}
 
 
+label a{
+  color: var(--Primary10);
+text-decoration: 2px underline var(--Primary5)
+}
 
+
+.advance , .downloadfirst{
+  width: 100%;
+  display: block;
+  position: relative;
+  text-align: center;
+  height: 40px;
+}
+
+.advancedownload , .downloadfirstbutton{
+  border: none;
+  background-color: var(--Primary5);
+  padding: 10px;
+  margin-top: 1em;
+  color: var(--Primary0);
+  cursor: pointer;
+}
+
+.downloadfirst{
+  margin-top: 4em;
+}
+
+form span{
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+}
 
 .header-right li{
     font-size: var(--FontSmall);
 }
-
-
-
 
 @media only screen and (min-width: 776px) {
     .menu {

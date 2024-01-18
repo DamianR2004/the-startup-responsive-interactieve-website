@@ -61,53 +61,62 @@
             <li>De 5 CMS'en waar wij het liefst mee werken</li>
         </ul>
     </section>
-   
+
+    <div class="closebutton" style="display: none;">
+    <button id="closedownloadbtn"> x </button>
+</div>
+
+    <section class="information-download-container" style="display:none">
+        <div class="information-download">
+ 
+         <h4>De CMS keuzegids 2023</h4>
+         <!-- <img src="./assets/cmskeuzegids.png" alt="Boek CMS Keuzegids 2023"> -->
+ 
+         <form id="myform"> 
+            
+             <label for="fname">Voornaam</label>
+             <span>*</span>
+             <input type="text" id="fname" name="firstname" required>
+            
+              
+             <label for="lname">Achternaam</label>
+             <span>*</span> 
+             <input type="text" id="lname" name="lastname" required>
+           
+             
+             <label for="mail">E-mail</label>
+             <span>*</span> 
+             <input type="email" id="mail" name="email" required> 
+             
+             
+             <label for="phonenumber">Telefoonnummer</label>
+             <span>*</span> 
+             <input type="tel" id="phonenumber" name="telnumber"
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required> 
+ 
+            <input type="checkbox" id="validation" name="checkbox" required>
+            <label for="validation">Ik ga akkoord met de <a href="">algemene voorwaarden</a> </label>
+          
+        
+            <div class="advance">
+                <button class="advancedownload">Download</button>
+               </div>
+               
+       
+
+         </form>
+
+     
+
+     </div>
+     </section>
+     <div class="downloadfirst">
+     <button class="downloadfirstbutton"> Download</button>
+    </div>
+     
     </main>
     <footer></footer>
 
-
-    <section class="information-download-container">
-        
-       <div class="information-download">
-        <!-- <button id="closedownloadbtn"> <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><path fill="#000000" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg> </button> -->
-
-        <h4>De CMS keuzegids 2023</h4>
-        <img src="./assets/cmskeuzegids.png" alt="Boek CMS Keuzegids 2023">
-
-        <form>
-            
-            <label for="fname">Voornaam</label>
-            <input type="text" id="fname" name="firstname" required>
-             
-            <label for="lname">Achternaam</label>
-            <input type="text" id="lname" name="lastname" required>
-            <span>*</span> 
-            
-            <label for="mail">E-mail</label>
-            <input type="email" id="mail" name="email" required> 
-             <span>*</span> 
-            
-            <label for="phonenumber">Telefoonnummer</label>
-            <input type="tel" id="phonenumber" name="telnumber"
-           pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required> 
-           <span>*</span>
-
-           <label for="validation">Ik ga akkoord met de <a href="">algemene voorwaarden</a> </label>
-         
-           <input type="checkbox" id="validation" name="checkbox" required>
-           
-
-           
-
-
-        </form>
-
-    </div>
-    </section>
-
-    <div class="downloadinfo">
-        <button type="submit" title="downloaden" id="downloadbtn" value="download">Download</button>
-    </div>
 
 
 
