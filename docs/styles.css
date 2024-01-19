@@ -143,12 +143,12 @@ h1 {
     font-size: 1.4em;
  }
 
- body:has(.information-download-container.open:not(.close)) main{
+ /* body:has(.information-download-container.open:not(.close)) main{
   .information-text{
       display: none;
-  }
+  } */
 
-} 
+
  
 
 .information-download-container{ 
@@ -157,11 +157,17 @@ h1 {
   display: block; 
   background-color: var(--Primary2);
   padding: 20px;
-  margin-top: .5em;
-  height: 100%;
+  margin: -1em 0 0;
 }
 
+form{
+  margin-top: 5em;
+  margin-bottom: 6em;
+}
 
+h4{
+  margin-top: 3em;
+}
 
 
   input[type=text]{
@@ -209,6 +215,7 @@ h1 {
     position: relative;
     text-align: center;
     height: 40px;
+    margin: -2em 0 0;
   }
 
  .closebutton button{
@@ -258,7 +265,7 @@ text-decoration: 2px underline var(--Primary5)
 }
 
 .downloadfirst{
-  margin-top: 4em;
+  margin: 4em 0 4em;
 }
 
 form span{
@@ -289,11 +296,16 @@ form span{
  
 }
 
+@media  screen and (max-width:860px) {
+  .header-right li:nth-of-type(n + 1):nth-of-type(-n + 7) {
+    display: none;
+  }
+  
+}
 
-  @media only screen and (max-width: 776px) {
-    .header-right li:nth-of-type(n + 1):nth-of-type(-n + 7) {
-      display: none;
-    }
+
+  @media only screen and (max-width: 790px) {
+ 
 
     .information-download-container img{
         display: none;
