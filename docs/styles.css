@@ -35,6 +35,11 @@ header{
     
 }
 
+html, body{
+   overflow-x: hidden;
+   max-width:100%;
+}
+
 .header-left{
     max-height: 100%;
 }
@@ -147,19 +152,16 @@ h1 {
  
 
 .information-download-container{ 
-  display: block;
+   
+  box-sizing: border-box; 
+  display: block; 
   background-color: var(--Primary2);
-  width: 100%;
-  height: 100%;
   padding: 20px;
   margin-top: .5em;
-
-
+  height: 100%;
 }
 
-#myform{
-  height:500px;
-}
+
 
 
   input[type=text]{
@@ -195,6 +197,12 @@ h1 {
     border-right: 0;  
   }
 
+  input[type=checkbox] {
+    padding: 10px;
+    margin: 10px 0;
+    accent-color: var(--Primary5);
+  }
+
   .closebutton{
     width: 100%;
     display: block;
@@ -223,11 +231,7 @@ h1 {
   margin-top: 10em;
 }
 
-input[type=checkbox] {
-  padding: 10px;
-  margin: 10px 0;
-  accent-color: var(--Primary5);
-}
+
 
 
 label a{
@@ -236,7 +240,7 @@ text-decoration: 2px underline var(--Primary5)
 }
 
 
-.advance , .downloadfirst{
+.downloadfirst{
   width: 100%;
   display: block;
   position: relative;
@@ -244,7 +248,7 @@ text-decoration: 2px underline var(--Primary5)
   height: 40px;
 }
 
-.advancedownload , .downloadfirstbutton{
+.downloadfirstbutton{
   border: none;
   background-color: var(--Primary5);
   padding: 10px;
@@ -265,6 +269,16 @@ form span{
 
 .header-right li{
     font-size: var(--FontSmall);
+}
+
+.submitwrapper{
+  text-align: center;
+  margin-top: 3em;
+}
+
+#advanced{
+  border: none;
+  padding: 10px;
 }
 
 @media only screen and (min-width: 776px) {

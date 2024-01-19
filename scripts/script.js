@@ -24,6 +24,7 @@
             downloadCloseButton.style.display = 'none';
             textOpenInformation.style.display = 'block';
             downloadFirstButton.style.display = 'block';
+
         });
        
     
