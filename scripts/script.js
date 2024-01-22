@@ -1,5 +1,5 @@
 
-    let downloadButton = document.querySelector(".downloadfirst");
+    let downloadButton = document.querySelector(".download-first");
     let downloadCloseButton1 = document.querySelector(".closebutton");
     let downloadInformation = document.querySelector(".information-download-container");
     let textInformation = document.querySelector(".information-text")
@@ -14,7 +14,7 @@
 
     
     
-        let downloadFirstButton = document.querySelector(".downloadfirst");
+        let downloadFirstButton = document.querySelector(".download-first");
         let downloadCloseButton = document.querySelector(".closebutton");
         let downloadCloseInformation = document.querySelector(".information-download-container");
         let textOpenInformation = document.querySelector(".information-text")

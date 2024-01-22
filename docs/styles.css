@@ -247,7 +247,7 @@ text-decoration: 2px underline var(--Primary5)
 }
 
 
-.downloadfirst{
+.download-first{
   width: 100%;
   display: block;
   position: relative;
@@ -255,7 +255,7 @@ text-decoration: 2px underline var(--Primary5)
   height: 40px;
 }
 
-.downloadfirstbutton{
+.download-first-button{
   border: none;
   background-color: var(--Primary5);
   padding: 10px;
@@ -264,8 +264,8 @@ text-decoration: 2px underline var(--Primary5)
   cursor: pointer;
 }
 
-.downloadfirst{
-  margin: 4em 0 4em;
+.download-first{
+  margin: 4em 0 3em;
 }
 
 form span{
@@ -278,7 +278,7 @@ form span{
     font-size: var(--FontSmall);
 }
 
-.submitwrapper{
+.submit-wrapper{
   text-align: center;
   margin-top: 3em;
 }
